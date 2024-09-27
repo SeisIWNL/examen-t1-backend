@@ -21,7 +21,7 @@ public class VehicleController {
         try {
             String[] vehiculo = authService.validarPlaca(vehicleRequest);
             if (vehiculo == null) {
-                return new VehicleResponse("","","","","","","");
+                return new VehicleResponse("000","ERROR",null,null,null,null,null);
             }
             return new VehicleResponse(vehiculo[0],vehiculo[1],vehiculo[2],vehiculo[3],vehiculo[4],vehiculo[5],vehiculo[6]);
         } catch (IOException e) {
